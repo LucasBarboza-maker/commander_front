@@ -1,0 +1,10 @@
+{
+    "white_color":"white",
+    "main_color":"#85A708",
+    "green_opaque":"#A4C18A",
+    "green_dark":"#4B6717",
+    "text_opaque":"rgba(0,0,0,0.4)",
+    "border_opaque":"rgba(0,0,0,0.2)",
+    "back_button_color":"#A1A1A1"
+
+}
