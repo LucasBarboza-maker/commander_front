@@ -1,10 +1,8 @@
 import * as React from 'react';
 import Utils from '../../assets/Utils/colors.json';
 import fonts from '../../assets/Utils/fontSizes.json';
-import {StatusBar as ExpoStatusBar} from 'expo-status-bar';
-import {StyleSheet, View, Text, StatusBar, Pressable } from 'react-native';
-import CommanderIcon from "../../components/SVGComponents/commanderIcon.js";
-import BrandButton from '../../components/Inputs/Buttons/brandButton.js';
+import {StyleSheet, View, Text} from 'react-native';
+import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 import Button from '../../components/Inputs/Buttons/buttons.js';
 import {BackButtonAbsolute} from '../../components/Inputs/Buttons/backButton.js';
 
@@ -14,10 +12,7 @@ import {BasicTextInput, PasswordTextInput} from '../../components/Inputs/Text/In
 export default function SignUp({navigation}) {
   return (
     <View style={{display: 'flex', alignItems: 'center'}}>
-            <View style={{height:StatusBar.currentHeight, backgroundColor:Utils.main_color, width:'100%'}}>
-                <ExpoStatusBar style="light"></ExpoStatusBar>
-            </View>
-        
+            <GlobalStatusBar/>      
             <View style={{display:'flex', width:'100%',height:'95%', alignItems: 'center', justifyContent: 'space-between', paddingTop:10, paddingBottom:10, paddingLeft:34, paddingRight:34}}>
                 <View style={{width:'100%', height:'20%', justifyContent: 'space-between'}}>
                     <View>

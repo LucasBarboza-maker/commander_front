@@ -5,6 +5,7 @@
     "green_dark":"#4B6717",
     "text_opaque":"rgba(0,0,0,0.4)",
     "border_opaque":"rgba(0,0,0,0.2)",
-    "back_button_color":"#A1A1A1"
+    "back_button_color":"#A1A1A1",
+    "tab_button_inactive":"#8F8F8F"
 
 }

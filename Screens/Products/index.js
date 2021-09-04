@@ -4,12 +4,12 @@ import { Text, View } from 'react-native';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 
 
-export default function Home() {
+export default function Products() {
   return (
     <>
     <GlobalStatusBar/>
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home</Text>
+      <Text>Produtos</Text>
     </View>
     </>
   );
