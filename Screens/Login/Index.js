@@ -2,7 +2,7 @@ import * as React from 'react';
 import Utils from '../../assets/Utils/colors.json';
 import fonts from '../../assets/Utils/fontSizes.json';
 import {StyleSheet, View, Text } from 'react-native';
-import CommanderIcon from "../../components/SVGComponents/commanderIcon.js";
+import CommanderIcon from "../../components/SVGComponents/CommanderIcon.js";
 import BrandButton from '../../components/Inputs/Buttons/brandButton.js';
 import Button from '../../components/Inputs/Buttons/buttons.js';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';

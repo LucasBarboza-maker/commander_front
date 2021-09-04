@@ -20,7 +20,6 @@ const Tab = createBottomTabNavigator();
 export default function Main() {
   return (
     
-    <NavigationContainer independent={true} >
       <Tab.Navigator 
       activeColor="#00aea2"
       shifting={true}
@@ -112,6 +111,5 @@ export default function Main() {
         
 
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
