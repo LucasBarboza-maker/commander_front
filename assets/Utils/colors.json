@@ -1,7 +1,9 @@
 {
     "white_color":"white",
     "main_color":"#85A708",
+    "color_base":"#696868",
     "green_opaque":"#A4C18A",
+    "red_opaque":"#C20606",
     "green_dark":"#4B6717",
     "text_opaque":"rgba(0,0,0,0.4)",
     "border_opaque":"rgba(0,0,0,0.2)",

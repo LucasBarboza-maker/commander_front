@@ -1,4 +1,5 @@
 {
+  "backgroundColor": "red",
   "expo": {
     "name": "commander_front",
     "slug": "commander_front",

@@ -56,7 +56,6 @@ export function FilterInputText({placeHolder, width, height}) {
             style={{fontSize:fonts.f17px, paddingLeft:40}}
             onChangeText={()=> console.log("oi")}
             placeholder={'Pesquisar'}
-            secureTextEntry={visible}
             />
             <FontAwesomeIcon onPress={()=> setVisible(false)} icon={ faBars } size={32} style={{position:'absolute', right:0,  top:5, marginRight:10, color:Colors.text_opaque}} />
         </View>
@@ -75,7 +74,7 @@ const styles = StyleSheet.create({
     },
   inputFilter: {
     position:'absolute',
-    top:25,
+    top:15,
     fontSize:fonts.f17px,
     borderColor:Colors.border_opaque,
     borderRadius:10,
