@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, Pressable} from 'react-native';
+import { Text, View, Pressable, ScrollView} from 'react-native';
 
 import Utils from '../../assets/Utils/colors.json';
 import Fonts from '../../assets/Utils/fontSizes.json';
@@ -13,16 +13,18 @@ import {FilterInputText} from '../../components/Inputs/Text/InputText.js'
 export default function Tables() {
   return (
     <>
-    <GlobalStatusBar/>
-      <View style={{paddingTop:10, height: 54, width: '100%', justifyContent: 'flex-start',  alignItems: 'center', backgroundColor: Utils.main_color, paddingLeft: 34, paddingRight: 34}}>
+      <GlobalStatusBar/>
+      <View style={{display:'flex', justifyContent: 'center', alignItems: 'center', backgroundColor:Utils.main_color, padding:25}}>
         <FilterInputText width="100%" height={45}/>
       </View>
-      <TableCard width="100%" height={120} title="Mesa 1" description="Mesa perto da porta" employer="Gustavo P"/>
-      <TableCard width="100%" height={120} title="Mesa 10" description="Mesa perto do Banheiro" employer="Ingrid C"/>
-      <TableCard width="100%" height={120} title="Mesa 15" description="" employer="Gustavo P" delivery={true}/>
-      <TableCard width="100%" height={120} title="Mesa 16" description="Entrega longe" employer="Ingrid C" delivery={true}/>
-      <TableCard width="100%" height={120} title="Mesa 17" description="Segundo andar" employer="Ingrid C"/>
-      <TableCard width="100%" height={120} title="Mesa 19" description="Mesa perto da porta" employer="Gustavo P"/>
+      <ScrollView style={{zIndex:-10}}>
+        <TableCard width="100%" height={120} title="Mesa 1" description="Mesa perto da porta" employer="Gustavo P"/>
+        <TableCard width="100%" height={120} title="Mesa 10" description="Mesa perto do Banheiro" employer="Ingrid C"/>
+        <TableCard width="100%" height={120} title="Mesa 15" description="" employer="Gustavo P" delivery={true}/>
+        <TableCard width="100%" height={120} title="Mesa 16" description="Entrega longe" employer="Ingrid C" delivery={true}/>
+        <TableCard width="100%" height={120} title="Mesa 17" description="Segundo andar" employer="Ingrid C"/>
+        <TableCard width="100%" height={120} title="Mesa 19" description="Mesa perto da porta" employer="Gustavo P"/>
+      </ScrollView>
 
     </>
   );
