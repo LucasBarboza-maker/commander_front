@@ -3,7 +3,7 @@ import Colors from '../../../assets/Utils/colors.json';
 import {Pressable, Text} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
-import ArrowLeftSvg from "../../SVGComponents/ArrowLeftIcon";
+import ArrowLeftSvgWhite from "../../SVGComponents/ArrowLeftIconWhite";
 
 export function BackButtonAbsolute({width, height, PageName, navigation}) {
     return(
@@ -14,11 +14,21 @@ export function BackButtonAbsolute({width, height, PageName, navigation}) {
     )
 }
 
-export function BackButton({width, height, brandName}) {
+export function BackButton({width, height, navigation, color}) {
     return(
-        <Pressable onPress={() => console.log(brandName)} style={{ width: width, height:height, borderRadius:10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}>
+        <Pressable onPress={() => navigation.goBack()} style={{ width: width, height:height, borderRadius:10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}>
            <ArrowLeftSvg/>
-           <Text style={{color:Colors.back_button_color, fontWeight:'bold', fontSize:20}}>Voltar</Text>
+           <Text style={{color:color, fontWeight:'bold', fontSize:20}}>Voltar</Text>
+        </Pressable>
+    )
+}
+export function BackButtonWhite({width, height, PageName, color, navigation}) {
+    return(
+
+        
+        <Pressable onPress={() => navigation.goBack()} style={{ width: width, height:height, borderRadius:10, flexDirection:'row', justifyContent:'center', alignItems: 'center'}}>
+           <ArrowLeftSvgWhite/>
+           <Text style={{color:color, fontWeight:'bold', fontSize:20}}>Voltar</Text>
         </Pressable>
     )
 }

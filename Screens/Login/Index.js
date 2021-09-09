@@ -29,7 +29,7 @@ export default function Login({navigation}) {
           <View style={{width: '100%', height:'auto', justifyContent: 'center', alignItems: 'center'}}>
             <BasicTextInput placeHolder="Email" height={50} width='100%'/>
             <PasswordTextInput placeHolder="Senha" height={50} width='100%'/>
-            <Button width='100%' height={50} text={"Entrar"} routeName="Main" navigation={navigation} UpperMarginQTD={17}/>
+            <Button color={Utils.white_color} bgColor={Utils.main_color} width='100%' height={50} text={"Entrar"} routeName="Main" navigation={navigation} UpperMarginQTD={17}/>
             <Text onPress={() => console.log("Esqueceu o Login tela")}  style={{textDecorationLine:'underline', fontWeight:'bold',color:Utils.text_opaque, fontSize:fonts.f18px}}>Esqueceu o Login?</Text>
           </View>
             <Text onPress={() => navigation.navigate('SignUp')} style={{textDecorationLine:'underline', fontWeight:'bold',color:Utils.text_opaque, fontSize:fonts.f18px}}>Não tem uma conta? Registre-se</Text>

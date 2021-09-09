@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Utils from '../../assets/Utils/colors.json'
-import Home from '../Home/';
+import Home from '../Home/Index';
 import Tables from '../Tables/';
 import Products from '../Products/';
 import Profile from '../Profile/';
