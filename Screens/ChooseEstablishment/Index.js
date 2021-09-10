@@ -14,7 +14,9 @@ import { ImageButtonManageStablishment, ImageButtonPrinter, ImageButtonOrder } f
 import { BackButtonWhite } from '../../components/Inputs/Buttons/backButton.js';
 
 
-export default function Home({ navigation }) {
+export default function ChooseEstablishment({ route, navigation }) {
+
+    const { page } = route.params;
     return (
         <>
             <GlobalStatusBar />
@@ -30,26 +32,17 @@ export default function Home({ navigation }) {
             </View>
 
             <ScrollView>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Aberto" open={true}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={false}/>
-
-                
-               
-                
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Aberto" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+                <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" open={true} navigation={navigation} afterPage={page}/>
+         
             </ScrollView>
         </>
     );

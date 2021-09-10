@@ -5,6 +5,8 @@ import Login from './Screens/Login/Index';
 import SignUp from './Screens/SignUp/Index';
 import Main from './Screens/MainRoutes/Index';
 import ChooseEstablishment from './Screens/ChooseEstablishment/Index';
+import ManageEstablishment from './Screens/ManageEstablishment/Index';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -37,7 +39,14 @@ const MyStack = () => {
             component={ChooseEstablishment}
             options={{ title: 'ChooseEstablishment' }}
           />
+
+        <Stack.Screen
+            name="ManageEstablishment"
+            component={ManageEstablishment}
+            options={{ title: 'ManageEstablishment' }}
+          />
         </Stack.Navigator>
+        
       </NavigationContainer>
     </>
   );
