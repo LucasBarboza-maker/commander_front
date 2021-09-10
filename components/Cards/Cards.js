@@ -102,7 +102,6 @@ export function StablishmentCardChoose({title, value, width, height,status}){
     )
 }
 
-
 const styles = StyleSheet.create({
  
 });
