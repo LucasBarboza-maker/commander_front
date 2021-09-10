@@ -18,8 +18,8 @@ export default function Home({ navigation }) {
     return (
         <>
             <GlobalStatusBar />
-            <View style={{ paddingTop: 23, paddingLeft: 6, paddingRight: 16, height: '28%', width: '100%', justifyContent: 'flex-start', backgroundColor: Utils.main_color, borderBottomLeftRadius: 20, borderBottomRightRadius: 20 }}>
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+            <View style={{paddingTop:10, height: '30%', width: '100%', justifyContent: 'flex-start',  alignItems: 'center', backgroundColor: Utils.main_color, borderBottomLeftRadius:20, borderBottomRightRadius:20}}>
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width:'100%', paddingLeft: 10, paddingRight: 10}}>
                     <BackButtonWhite color={Utils.white_color} width={75} navigation={navigation} />
                     <Button color={Utils.black_color} width={140} height={30} text="Adicionar" bgColor={Utils.white_color} />
 
@@ -29,7 +29,7 @@ export default function Home({ navigation }) {
                 </View>
             </View>
 
-            <ScrollView style={{ paddingLeft: 23, paddingRight: 23, }}>
+            <ScrollView>
                 <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" />
                 <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" />
                 <StablishmentCardChoose title="Hamburgueria" value="Est. União Industria, Corrêas, 300" status="Fechado" />

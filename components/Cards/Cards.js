@@ -94,7 +94,7 @@ export function StablishmentCard({title, value, width, height}){
 export function StablishmentCardChoose({title, value, width, height,status}){
     return(
         <View style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
-            <Text style={{backgroundColor:Colors.red_violet, color:Colors.white_color, position:'absolute', right:0, top:30, padding:10, borderRadius:2}}>{status}</Text>                    
+            <Text style={{backgroundColor:Colors.red_violet, color:Colors.white_color, position:'absolute', right:10, top:30, padding:5, borderRadius:2}}>{status}</Text>                    
             <Text style={{fontSize:fonts.f19px}}>{title}</Text>
             <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
         </View>
