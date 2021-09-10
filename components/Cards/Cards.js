@@ -91,6 +91,17 @@ export function StablishmentCard({title, value, width, height}){
     )
 }
 
+export function Asasd({title, value, width, height}){
+    return(
+        <View style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
+            <FontAwesomeIcon icon={ faTimes } size={24} style={{color:Colors.red_opaque, position:'absolute', right:0, top:10}} />                    
+            <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+            <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
+        </View>
+   
+    )
+}
+
 const styles = StyleSheet.create({
  
 });

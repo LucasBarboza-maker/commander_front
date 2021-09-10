@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { Text, View, Pressable, ScrollView} from 'react-native';
+import { Text, View, ScrollView} from 'react-native';
 
 import Utils from '../../assets/Utils/colors.json';
 import Fonts from '../../assets/Utils/fontSizes.json';
 
-import CommanderIconSvg from '../../components/SVGComponents/CommanderIconWhite';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 import {TableCard, ProductCard} from '../../components/Cards/Cards.js'
-import {FilterInputText} from '../../components/Inputs/Text/InputText.js'
+import {FilterTables} from '../../components/Filter/Filter.js';
 
 
 export default function Tables() {
@@ -15,7 +14,7 @@ export default function Tables() {
     <>
       <GlobalStatusBar/>
       <View style={{display:'flex', justifyContent: 'center', alignItems: 'center', backgroundColor:Utils.main_color, padding:25}}>
-        <FilterInputText width="100%" height={45}/>
+        <FilterTables width="100%" height={45}/>
       </View>
       <ScrollView style={{zIndex:-10}}>
         <TableCard width="100%" height={120} title="Mesa 1" description="Mesa perto da porta" employer="Gustavo P"/>

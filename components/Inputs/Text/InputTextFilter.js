@@ -9,39 +9,14 @@ import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { faSearch} from '@fortawesome/free-solid-svg-icons';
 import { faBars} from '@fortawesome/free-solid-svg-icons';
 
-export function BasicTextInput({placeHolder, width, height, icon}) {
+export function FilterTextInput({placeHolder, width, height}) {
     return(
             <TextInput
-            style={{...styles.input, width:width , height:height}}
+            style={{...styles.input, width:width , height:height, color:'white'}}
             onChangeText={()=> console.log("oi")}
+            keyboardType='numeric'
             placeholder={placeHolder}
             />
-   
-    )
-}
-
-export function PasswordTextInput({placeHolder, width, height}) {
-
-    const[visible, setVisible] = useState(true);
-    return(
-        <View style={{...styles.input,width: width}}>
-            <TextInput
-            style={{fontSize:fonts.f17px}}
-            onChangeText={()=> console.log("oi")}
-            placeholder={placeHolder}
-            secureTextEntry={visible}
-            />
-            
-            {visible ?
-            
-                <FontAwesomeIcon onPress={()=> setVisible(false)} icon={ faEye } size={32} style={{position:'absolute', right:0,  top:10, marginRight:10, color:Colors.text_opaque}} />
-
-            :
-                <FontAwesomeIcon onPress={()=> setVisible(true)} icon={ faEyeSlash } size={32} style={{position:'absolute', right:0,  top:10, marginRight:10, color:Colors.text_opaque}} />
-
-            }
-
-        </View>
    
     )
 }
@@ -50,9 +25,8 @@ export function PasswordTextInput({placeHolder, width, height}) {
 const styles = StyleSheet.create({
    input: {
         fontSize:fonts.f17px,
-        borderColor:Colors.border_opaque,
+        borderColor:Colors.white_color,
         borderRadius:10,
-        margin: 12,
         borderWidth: 1,
         padding: 10,
     },

@@ -5,10 +5,6 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/myImages/commander_icon.png",
-    "androidStatusBar": {
-      "backgroundColor": "#C2185B",
-      "translucent": false
-    },
     "splash": {
       "image": "./assets/myImages/splash.png",
       "resizeMode": "contain"
