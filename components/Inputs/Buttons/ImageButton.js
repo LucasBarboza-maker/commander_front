@@ -4,9 +4,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {Pressable, Text, ImageBackground} from 'react-native';
 import Fonts from '../../../assets/Utils/fontSizes.json'
 
-export function ImageButtonManageStablishment({width, height, text, resizeMode, source}) {
+export function ImageButtonManageStablishment({width, height, text, resizeMode, source, navigation}) {
     return(
-        <Pressable onPress={() => console.log(text)} style={{elevation:5, width:width, height:height, marginTop:17, borderRadius:10, display:'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+        <Pressable onPress={() => navigation.navigate('ChooseEstablishment')} style={{elevation:5, width:width, height:height, marginTop:17, borderRadius:10, display:'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
              
             <ImageBackground
                 style={{width:'100%', height:'100%', position:'absolute', shadowColor:'black'}}
