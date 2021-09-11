@@ -8,9 +8,11 @@
     "red_violet":"#A70808",
     "green_dark":"#4B6717",
     "text_opaque":"rgba(0,0,0,0.4)",
+    "black_opaque":"rgba(0,0,0,0.6)",
     "border_opaque":"rgba(0,0,0,0.2)",
     "back_button_color":"#A1A1A1",
     "tab_button_inactive":"#8F8F8F",
-    "transparent":"transparent"
+    "transparent":"transparent",
+    "input_text_value":"#787878"
 
 }

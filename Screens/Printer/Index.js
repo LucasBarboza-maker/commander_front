@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, Pressable, ScrollView} from 'react-native';
 import Utils from '../../assets/Utils/colors.json'
-import Button from '../../components/Inputs/Buttons/buttons.js'
+import {Button} from '../../components/Inputs/Buttons/buttons.js'
 import Fonts from '../../assets/Utils/fontSizes.json'
 
 
@@ -10,7 +10,7 @@ import CommanderIconSvg from '../../components/SVGComponents/CommanderIconWhite'
 import { EllipseImage } from '../../components/Header/EllipseImage.js';
 import { StablishmentCardChoose } from '../../components/Cards/Cards.js'
 
-import {InfoCard, StablishmentCard} from '../../components/Cards/Cards.js'
+import {InfoCard, PressableInfoCard, StablishmentCard} from '../../components/Cards/Cards.js'
 import { BackButtonWhite } from '../../components/Inputs/Buttons/backButton.js';
 
 
@@ -28,8 +28,8 @@ export default function ChoosePrinterConnection({ route, navigation }) {
                     <EllipseImage height={160} width={'100%'} image={require('../../assets/myImages/BackgroundImages/impressora.jpg')} text="Configurar Impressora" />
                 </View>
             </View>
-            <InfoCard title="Lan" value="Configurar por lan(WI-FI)"></InfoCard>
-            <InfoCard title="Bluetooth" value="Configurar Bluetooth"></InfoCard>
+            <PressableInfoCard title="Lan" value="Configurar por lan(WI-FI)" navigation={navigation} screenName="WifiPrinterConfig"></PressableInfoCard>
+            <PressableInfoCard title="Bluetooth" value="Configurar Bluetooth" navigation={navigation} screenName="BluetoothPrinterConfig"></PressableInfoCard>
         </>
     );
 }

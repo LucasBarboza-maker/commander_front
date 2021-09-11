@@ -86,6 +86,16 @@ export function InfoCard({title, value, width, height}){
     )
 }
 
+export function PressableInfoCard({title, value, width, height, navigation, screenName}){
+    return(
+        <Pressable onPress={() => navigation.navigate(screenName)} style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
+            <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+            <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
+        </Pressable>
+   
+    )
+}
+
 export function StablishmentCard({title, value, width, height}){
     return(
         <View style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>

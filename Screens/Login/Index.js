@@ -4,7 +4,7 @@ import fonts from '../../assets/Utils/fontSizes.json';
 import {StyleSheet, View, Text } from 'react-native';
 import CommanderIcon from "../../components/SVGComponents/CommanderIcon.js";
 import BrandButton from '../../components/Inputs/Buttons/brandButton.js';
-import Button from '../../components/Inputs/Buttons/buttons.js';
+import {Button} from '../../components/Inputs/Buttons/buttons.js';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 import {BasicTextInput, PasswordTextInput} from '../../components/Inputs/Text/InputText';
 

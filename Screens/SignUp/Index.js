@@ -3,7 +3,7 @@ import Utils from '../../assets/Utils/colors.json';
 import fonts from '../../assets/Utils/fontSizes.json';
 import {StyleSheet, View, Text} from 'react-native';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
-import Button from '../../components/Inputs/Buttons/buttons.js';
+import {Button} from '../../components/Inputs/Buttons/buttons.js';
 import {BackButtonAbsolute} from '../../components/Inputs/Buttons/backButton.js';
 
 import {BasicTextInput, PasswordTextInput} from '../../components/Inputs/Text/InputText';

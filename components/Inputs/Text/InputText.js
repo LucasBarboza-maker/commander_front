@@ -20,6 +20,20 @@ export function BasicTextInput({placeHolder, width, height, icon}) {
     )
 }
 
+export function BasicTextInputPlaceHolderKeep({placeHolder, width, height, icon, placeHolderExample}) {
+    return(
+        <View>
+            <TextInput
+            style={{...styles.input, width:width , height:height, textAlign:'right'}}
+            onChangeText={()=> console.log("oi")}
+            placeholder={placeHolderExample}
+            placeholderTextColor={Colors.input_text_value}
+            />
+            <Text style={{position: 'absolute', bottom:28, left:30, fontSize:fonts.f17px, color:Colors.text_opaque}}>{placeHolder}</Text>
+        </View>
+    )
+}
+
 export function PasswordTextInput({placeHolder, width, height}) {
 
     const[visible, setVisible] = useState(true);
