@@ -31,7 +31,7 @@ export default function SignUp({navigation}) {
                     <PasswordTextInput placeHolder="Confirmar Senha" height={50} width='100%'/>
                     <Text style={{textDecorationLine:'underline', fontWeight:'bold',color:Utils.text_opaque, fontSize:fonts.f18px}}>Você aceita os termos?</Text>
                 </View>
-                <Button width='100%' height={50} text={"Registrar"} paddingLeftValue={34} paddingRightValue={34} UpperMarginQTD={17}/>
+                <Button color={Utils.white_color} bgColor={Utils.main_color} width='100%' height={50} text={"Registrar"} routeName="Main" navigation={navigation} UpperMarginQTD={17}/>
             </View>
     </View>
   ); 

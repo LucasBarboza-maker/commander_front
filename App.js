@@ -6,7 +6,7 @@ import SignUp from './Screens/SignUp/Index';
 import Main from './Screens/MainRoutes/Index';
 import ChooseEstablishment from './Screens/ChooseEstablishment/Index';
 import ManageEstablishment from './Screens/ManageEstablishment/Index';
-
+import PrinterConfig from './Screens/Printer/Index'
 
 
 const Stack = createNativeStackNavigator();
@@ -44,6 +44,12 @@ const MyStack = () => {
             name="ManageEstablishment"
             component={ManageEstablishment}
             options={{ title: 'ManageEstablishment' }}
+          />
+
+        <Stack.Screen
+            name="PrinterConfig"
+            component={PrinterConfig}
+            options={{ title: 'PrinterConfig' }}
           />
         </Stack.Navigator>
         

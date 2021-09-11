@@ -4,6 +4,8 @@ import {Pressable, Text} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import ArrowLeftSvgWhite from "../../SVGComponents/ArrowLeftIconWhite";
+import ArrowLeftSvg from "../../SVGComponents/ArrowLeftIcon";
+
 
 export function BackButtonAbsolute({width, height, PageName, navigation}) {
     return(
