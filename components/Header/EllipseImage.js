@@ -2,10 +2,8 @@ import * as React from 'react';
 import Colors from '../../assets/Utils/colors.json';
 import fonts from '../../assets/Utils/fontSizes.json';
 import {View, StyleSheet, Pressable, Text, ImageBackground} from 'react-native';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faPen, faCamera} from '@fortawesome/free-solid-svg-icons';
 
-export function EllipseImage({width, height, image}) {
+export function EllipseImage({width, height, image, text}) {
 
     return(
         <>
@@ -17,7 +15,7 @@ export function EllipseImage({width, height, image}) {
                 >
                </ImageBackground>
         </View>
-        <Text style={{fontWeight:'bold', color:Colors.white_color, fontSize:fonts.f23px}}>Escolha o Estabelecimento</Text>
+        <Text style={{fontWeight:'bold', color:Colors.white_color, fontSize:fonts.f23px}}>{text}</Text>
         </>
     )
 }

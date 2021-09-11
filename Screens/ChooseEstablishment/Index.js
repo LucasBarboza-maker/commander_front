@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Text, View, Pressable, ScrollView} from 'react-native';
 import Utils from '../../assets/Utils/colors.json'
-import Button from '../../components/Inputs/Buttons/buttons.js'
+import {Button} from '../../components/Inputs/Buttons/buttons.js'
 import Fonts from '../../assets/Utils/fontSizes.json'
 
 

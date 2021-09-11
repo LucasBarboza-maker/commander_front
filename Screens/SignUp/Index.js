@@ -3,7 +3,7 @@ import Utils from '../../assets/Utils/colors.json';
 import fonts from '../../assets/Utils/fontSizes.json';
 import {StyleSheet, View, Text} from 'react-native';
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
-import Button from '../../components/Inputs/Buttons/buttons.js';
+import {Button} from '../../components/Inputs/Buttons/buttons.js';
 import {BackButtonAbsolute} from '../../components/Inputs/Buttons/backButton.js';
 
 import {BasicTextInput, PasswordTextInput} from '../../components/Inputs/Text/InputText';
@@ -31,7 +31,7 @@ export default function SignUp({navigation}) {
                     <PasswordTextInput placeHolder="Confirmar Senha" height={50} width='100%'/>
                     <Text style={{textDecorationLine:'underline', fontWeight:'bold',color:Utils.text_opaque, fontSize:fonts.f18px}}>Você aceita os termos?</Text>
                 </View>
-                <Button width='100%' height={50} text={"Registrar"} paddingLeftValue={34} paddingRightValue={34} UpperMarginQTD={17}/>
+                <Button color={Utils.white_color} bgColor={Utils.main_color} width='100%' height={50} text={"Registrar"} routeName="Main" navigation={navigation} UpperMarginQTD={17}/>
             </View>
     </View>
   ); 

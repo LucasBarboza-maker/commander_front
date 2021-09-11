@@ -15,12 +15,18 @@ export function TableCard({title, description, employer, delivery, width, height
     const[visible, setVisible] = useState(true);
     return(
         <View style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
-            <View style={{width:'70%', height:'100%'}}>
-                <Text style={{fontSize:fonts.f20px}}>{title}</Text>
-                <Text style={{color:Colors.text_opaque}}>{description}</Text>
+            <View style={{width:'70%', height:'100%', display: 'flex', justifyContent:'space-between'}}>
+                <View>
+                    <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.text_opaque}}>{description}</Text>
+                </View>
+                <View>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.white_color, borderRadius:2, elevation:5, backgroundColor:Colors.green_dark, width:100, textAlign:'center'}}>
+                        {employer}
+                    </Text>
+                </View>
             </View>
-            <View style={{width:'30%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'space-between', alignItems: 'flex-end'}}>
-                <Text style={{ fontSize:fonts.f17px}}>{employer}</Text>
+            <View style={{width:'30%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'flex-end'}}>
                 <View style={{backgroundColor:Colors.green_dark, borderRadius:5, padding:5}}>
                     {delivery? 
                         <FontAwesomeIcon onPress={()=> setVisible(false)} icon={ faMotorcycle } size={38} style={{color:Colors.white_color}} />                    
@@ -44,7 +50,7 @@ export function ProductCard({title, description, employer, delivery, width, heig
                     <Text style={{fontSize:fonts.f15px, color:Colors.text_opaque}}>{description}</Text>
                 </View>
                 <View>
-                    <Text style={{fontSize:fonts.f15px, color:Colors.white_color, borderRadius:2, elevation:5, backgroundColor:Colors.green_dark, width:90, textAlign:'center'}}>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.white_color, borderRadius:2, elevation:5, backgroundColor:Colors.green_dark, width:100, textAlign:'center'}}>
                         R$:{preco}
                     </Text>
                 </View>
@@ -76,6 +82,16 @@ export function InfoCard({title, value, width, height}){
             <Text style={{fontSize:fonts.f19px}}>{title}</Text>
             <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
         </View>
+   
+    )
+}
+
+export function PressableInfoCard({title, value, width, height, navigation, screenName}){
+    return(
+        <Pressable onPress={() => navigation.navigate(screenName)} style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
+            <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+            <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
+        </Pressable>
    
     )
 }

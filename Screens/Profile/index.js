@@ -8,8 +8,6 @@ import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 import CommanderIconSvg from '../../components/SVGComponents/CommanderIconWhite';
 import {ProfilePhoto} from '../../components/Profile/ProfilePhoto.js';
 import {InfoCard, StablishmentCard} from '../../components/Cards/Cards.js'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
 
 export default function Profile({navigation}) {
   return (
