@@ -23,7 +23,7 @@ export default function Home({navigation}) {
       <View style={{height: '60%', width: '100%', justifyContent: 'flex-start',  alignItems: 'center', paddingLeft:23, paddingRight:23}}>
         <ImageButtonManageStablishment width="100%" height="30%" text="Gerenciar Restaurantes" resizeMode='stretch' navigation={navigation} afterPage={'ManageEstablishment'}/>
         <ImageButtonPrinter width="100%" height="30%" text="Configurar Impressora" resizeMode='stretch' navigation={navigation}/>
-        <ImageButtonOrder width="100%" height="30%" text="Comandar Pedido" resizeMode='stretch'/>
+        <ImageButtonOrder width="100%" height="30%" text="Comandar Pedido" resizeMode='stretch' navigation={navigation}/>
       </View>
     </>
   );

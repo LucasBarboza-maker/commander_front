@@ -46,9 +46,9 @@ export function ImageButtonPrinter({width, height, text, navigation}) {
 }
 
 
-export function ImageButtonOrder({width, height, text, resizeMode, source}) {
+export function ImageButtonOrder({width, height, text, resizeMode, source, navigation}) {
     return(
-        <Pressable onPress={() => console.log(text)} style={{elevation:5, width:width, height:height, marginTop:17, borderRadius:10, display:'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+        <Pressable onPress={() => navigation.navigate('Comandar')} style={{elevation:5, width:width, height:height, marginTop:17, borderRadius:10, display:'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
             <ImageBackground
                 style={{width:'100%', height:'100%', position:'absolute', shadowColor:'black'}}
                 imageStyle={{borderRadius:10, bottom:10}}
