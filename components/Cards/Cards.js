@@ -211,7 +211,7 @@ export function StablishmentCardChoose({title, value, width, height,status, navi
     if(status == "Aberto"){
 
     return(
-        <Pressable onPress={() => navigation.navigate(afterPage)} style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
+        <Pressable onPress={() => navigation.navigate(afterPage,{establishmentName:'Hamburgueria'})} style={{width: width, height:height, zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'column', padding:10, borderColor:Colors.border_opaque}}>
             <Text style={{textAlign:'center',backgroundColor:Colors.main_color, width:70, color:Colors.white_color, position:'absolute', right:10, top:30, padding:5, borderRadius:2}}>{status}</Text>                    
             <Text style={{fontSize:fonts.f19px}}>{title}</Text>
             <Text style={{fontSize:fonts.f15px, marginTop:10, color: Colors.text_opaque}}>{value}</Text>
