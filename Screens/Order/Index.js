@@ -60,7 +60,7 @@ export default function Comandar({navigation}) {
        
     </ScrollView>
     <View style={{paddingLeft:20, paddingRight:20, marginBottom:10}}>
-            <GhostButton onPress={() => {console.log("T1: "+orderNumberValue); }} height={50} text="Comandar" borderColor={Utils.main_color} color={Utils.main_color} navigation={navigation} routeName="ComandarProdutos"/>
+            <GhostButton onPress={() => {console.log("T1: "+orderNumberValue); }} height={50} text="Comandar" borderColor={Utils.main_color} color={Utils.main_color} navigation={navigation} routeName="ComandarProdutos" borderRadius={10}/>
     </View>
     </>
   );

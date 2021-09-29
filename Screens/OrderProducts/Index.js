@@ -39,7 +39,7 @@ export default function OrderProducts({navigation}) {
         <SelectProductCard width="100%" height={120} title="Pina Colada" description="Bebida alcoolica de abacaxi com coco." preco={"16,00"} source={require("../../assets/myImages/ProductImages/Bebida.webp")} values={products} setValues={setProducts}/>
       </ScrollView>
       <View style={{paddingLeft:20, paddingRight:20, paddingTop:10, backgroundColor:Utils.white_color}}>
-        <GhostButton  height={50} text="Comandar" borderColor={Utils.main_color} color={Utils.main_color} navigation={navigation} routeName="ComandarProdutos"/>
+        <GhostButton  height={50} text="Comandar" borderColor={Utils.main_color} color={Utils.main_color} navigation={navigation} routeName="ComandarProdutos" borderRadius={10}/>
       </View>
     </>
   );

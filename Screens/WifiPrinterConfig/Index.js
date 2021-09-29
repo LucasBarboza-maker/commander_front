@@ -54,7 +54,7 @@ export default function WifiPrinterConfig({ route, navigation }) {
                         </View>
 
                         <View style={{paddingLeft:20, paddingRight:20}}>
-                            <GhostButton color={Utils.green_dark} width='100%' height={38} text="Confirmar" bgColor={Utils.white_color} borderColor={Utils.green_dark}/>
+                            <GhostButton color={Utils.green_dark} width='100%' height={38} text="Confirmar" bgColor={Utils.white_color} borderColor={Utils.green_dark} borderRadius={10}/>
                         </View>
                     </View>
                 </ScrollView>

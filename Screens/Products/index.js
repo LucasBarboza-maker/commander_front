@@ -9,7 +9,7 @@ import {ProductCard, GroupTitleCard} from '../../components/Cards/Cards.js';
 import {FilterProducts} from '../../components/Filter/Filter.js';
 
 
-export default function Products() {
+export default function Products({navigation}) {
   return (
     <>
     <GlobalStatusBar/>
@@ -17,7 +17,7 @@ export default function Products() {
         <FilterProducts width="100%" height={45}/>
       </View>
       <ScrollView style={{zIndex:-10}}>
-        <ProductCard width="100%" height={120} title="Hamburguer" description="Sanduiche com carne e vegetais, molho de alho." preco={"16,50"} source={require("../../assets/myImages/ProductImages/Hamburguer.webp")}/>
+        <ProductCard navigation={navigation} width="100%" height={120} title="Hamburguer" description="Sanduiche com carne e vegetais, molho de alho." preco={"16,50"} source={require("../../assets/myImages/ProductImages/Hamburguer.webp")}/>
         <ProductCard width="100%" height={120} title="X-Bacon" description="Sanduiche com carne, queijo, salada e bacon." preco={"18,50"} source={require("../../assets/myImages/ProductImages/XBacon.jpg")}/>
         <ProductCard width="100%" height={120} title="X-Tudo" description="Sanduiche com duas carnes, dois queijos, salada, molho, bacon...." preco={"22,50"} source={require("../../assets/myImages/ProductImages/XTudo.webp")}/>
         <GroupTitleCard title= "Porções"/>

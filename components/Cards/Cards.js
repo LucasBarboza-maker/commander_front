@@ -10,11 +10,11 @@ import { faSearch} from '@fortawesome/free-solid-svg-icons';
 import { faHome, faCheck,  faTimes, faPlus, faMinus} from '@fortawesome/free-solid-svg-icons';
 import {faMotorcycle} from '@fortawesome/free-solid-svg-icons';
 
-export function TableCard({title, description, employer, delivery, width, height}) {
+export function TableCard({title, description, employer, delivery, width, height, navigation}) {
 
     const[visible, setVisible] = useState(true);
     return(
-        <View style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
+        <Pressable onPress={() => navigation.navigate("TableDetails", {delivery:delivery})} style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
             <View style={{width:'70%', height:'100%', display: 'flex', justifyContent:'space-between'}}>
                 <View>
                     <Text style={{fontSize:fonts.f19px}}>{title}</Text>
@@ -35,15 +35,15 @@ export function TableCard({title, description, employer, delivery, width, height
                     }
                 </View>
             </View>
-        </View>
+        </Pressable>
    
     )
 }
 
-export function ProductCard({title, description, employer, delivery, width, height, preco, source}) {
+export function ProductCard({title, description, employer, delivery, width, height, preco, source, navigation}) {
 
     return(
-        <View style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
+        <Pressable onPress={() => navigation.navigate("ProductDetails",{id:1})} style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
             <View style={{width:'70%', height:'100%', display: 'flex', justifyContent:'space-between'}}>
                 <View>
                     <Text style={{fontSize:fonts.f19px}}>{title}</Text>
@@ -62,7 +62,7 @@ export function ProductCard({title, description, employer, delivery, width, heig
                     source={source}>
                     </ImageBackground>
             </View>
-        </View>
+        </Pressable>
    
     )
 }
@@ -109,6 +109,51 @@ export function SelectProductCard({title, description, employer, delivery, width
                 multiline={true}
                 onChangeText={(e) => addObservation(values, e, title)}
                 placeholder="Alguma Observação?"
+                style={{backgroundColor:'white', width:'100%', height:40, borderRadius:5, borderWidth:1, borderColor:Colors.border_opaque, padding:10}}></TextInput>
+            </View>
+        :
+            <></>
+        }
+        </>
+    )
+}
+
+export function SelectOrderProductCard({title, description, employer, delivery, width, height, preco, source, values, setValues, quantityFromOrder, observation}) {
+    const[quantity, setQuantity] = useState(quantityFromOrder);
+
+    return(
+        <>
+        <View style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
+            <View style={{width:'70%', height:'100%', display: 'flex', justifyContent:'space-between'}}>
+                <View>
+                    <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.text_opaque}}>{description}</Text>
+                </View>
+                <View>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.white_color, borderRadius:2, elevation:5, backgroundColor:Colors.green_dark, width:100, textAlign:'center'}}>
+                        R$:{preco}
+                    </Text>
+                </View>
+            </View>
+            <View style={{width:'30%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'flex-end',zIndex:-1}}>
+                    <ImageBackground
+                    style={{width:100, height:100, position:'absolute', elevation:5, shadowColor:'black'}}
+                    imageStyle={{borderRadius:5}}
+                    source={source}>
+                    </ImageBackground>
+            </View>
+            <View style={{zIndex:1000, borderBottomEndRadius:5, borderBottomLeftRadius:5, display:'flex', flexDirection:'row', alignItems: 'center', justifyContent:'space-around', backgroundColor:Colors.green_dark, width:100, height:30, right:10, bottom:9,position:'absolute'}}>
+            
+                <Text style={{color:Colors.white_color,fontSize:fonts.f18px}}>{quantityFromOrder}</Text>
+    
+            </View>
+        </View>
+        { quantity > 0? 
+            <View style={{width:'100%', height:50, padding:10, display: 'flex', alignItems: 'center',justifyContent: 'center'}}>
+                <TextInput
+                multiline={true}
+                placeholder="Sem Observação"
+                value={observation}
                 style={{backgroundColor:'white', width:'100%', height:40, borderRadius:5, borderWidth:1, borderColor:Colors.border_opaque, padding:10}}></TextInput>
             </View>
         :

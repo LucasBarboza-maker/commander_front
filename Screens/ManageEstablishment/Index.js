@@ -25,7 +25,7 @@ export default function ManageEstablishment({ navigation, route}) {
           <BackButtonWhite color={Utils.white_color} width={75} navigation={navigation} />
         </View>
         <View>
-          <Text style={{fontSize:Fonts.f36px, color:Utils.white_color, marginTop:33, fontWeight: 'bold'}}>{establishmentName}</Text>
+          <Text style={{fontSize:Fonts.f23px, color:Utils.white_color, marginTop:33, fontWeight: 'bold'}}>{establishmentName}</Text>
 
         </View>
       </View>
