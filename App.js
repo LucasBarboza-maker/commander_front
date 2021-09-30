@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './Screens/Login/Index';
 import SignUp from './Screens/SignUp/Index';
@@ -16,10 +16,18 @@ import TableDetails from './Screens/TableDetails/Index.js'
 
 const Stack = createNativeStackNavigator();
 
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    background: 'White'
+  },
+};
+
 const MyStack = () => {
   return (
     <>
-      <NavigationContainer>
+      <NavigationContainer theme={MyTheme}>
         <Stack.Navigator screenOptions={{
           headerShown: false
         }}>
