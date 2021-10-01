@@ -163,6 +163,61 @@ export function SelectOrderProductCard({title, description, employer, delivery, 
     )
 }
 
+export function StatisticCard({width, height, valor, legendaDoTotal}) {
+
+    const[visible,setVisible] = useState(true);
+
+    return(
+        <>
+            <View style={{marginTop:10, elevation:5, display:'flex', justifyContent: 'space-between', flexDirection:'column', width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', padding:10, borderColor:Colors.border_opaque}}>
+                    <View style={{display:'flex', width:'100%', justifyContent:'space-between', fontSize:fonts.f16px, alignItems: 'center', flexDirection: 'row', alignItems: 'center'}}>
+                        <Text style={{color:Colors.text_opaque}}>{legendaDoTotal}</Text>
+    
+                        {visible ?
+                
+                            <FontAwesomeIcon onPress={()=> setVisible(false)} icon={ faEye } size={32} style={{color:Colors.text_opaque}} />
+
+                        :
+                            <FontAwesomeIcon onPress={()=> setVisible(true)} icon={ faEyeSlash } size={32} style={{color:Colors.text_opaque}} />
+
+                        }                
+                    </View>
+                <View style={{display:'flex', width:'100%', flexDirection:'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                    {visible ?
+                        <Text style={{color:Colors.green_dark, fontSize:fonts.f23px}}>{"R$ "+valor}</Text>
+                    :
+                        <Text style={{backgroundColor:Colors.green_opaque, color:Colors.green_opaque,fontSize:fonts.f20px}}>You shouldn't see that</Text>
+                    }
+                    <Text style={{fontSize:fonts.f16px, color:Colors.text_opaque}}>Ver Detalhes</Text>
+                </View>
+            </View>
+        </>
+    )
+}
+
+export function AllStatisticsCard({width, height, valor, legendaDoTotal, navigation}) {
+
+    const[visible,setVisible] = useState(true);
+
+    return(
+        <>
+            <Pressable onPress={() => navigation.navigate("StatisticsDetails")} style={{marginTop:10, elevation:5, display:'flex', justifyContent: 'space-between', flexDirection:'column', width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', padding:10, borderColor:Colors.border_opaque}}>
+                    <View style={{display:'flex', width:'100%', justifyContent:'space-between', fontSize:fonts.f16px, alignItems: 'center', flexDirection: 'row', alignItems: 'center'}}>
+                        <Text style={{color:Colors.text_opaque}}>{legendaDoTotal}</Text>             
+                    </View>
+                <View style={{display:'flex', width:'100%', flexDirection:'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                    {visible ?
+                        <Text style={{color:Colors.green_dark, fontSize:fonts.f23px}}>{valor}</Text>
+                    :
+                        <Text style={{backgroundColor:Colors.green_opaque, color:Colors.green_opaque,fontSize:fonts.f20px}}>You shouldn't see that</Text>
+                    }
+                    <Text style={{fontSize:fonts.f16px, color:Colors.text_opaque}}>Ver Detalhes</Text>
+                </View>
+            </Pressable>
+        </>
+    )
+}
+
 function addObservation(values, observation, title){
     values.map(e => {
         if(e.name == title){

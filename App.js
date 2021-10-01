@@ -12,7 +12,9 @@ import WifiPrinterConfig from './Screens/WifiPrinterConfig/Index';
 import Comandar from './Screens/Order/Index.js';
 import ComandarProdutos from './Screens/OrderProducts/Index.js';
 import ProductDetails from './Screens/ProductDetails/Index.js';
-import TableDetails from './Screens/TableDetails/Index.js'
+import TableDetails from './Screens/TableDetails/Index.js';
+import Statistics from './Screens/Statistics/Index.js';
+import StatisticsDetails from './Screens/StatisticsDetails/Index.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -99,6 +101,18 @@ const MyStack = () => {
             name="TableDetails"
             component={TableDetails}
             options={{ title: 'TableDetails' }}
+          />
+
+          <Stack.Screen
+            name="Statistics"
+            component={Statistics}
+            options={{ title: 'Statistics' }}
+          />
+
+          <Stack.Screen
+            name="StatisticsDetails"
+            component={StatisticsDetails}
+            options={{ title: 'StatisticsDetails' }}
           />
         </Stack.Navigator>
         

@@ -45,6 +45,25 @@ export function ImageButtonPrinter({width, height, text, navigation}) {
     )
 }
 
+export function ImageButtonNotebook({width, height, text, navigation}) {
+    return(
+        <Pressable onPress={() => navigation.navigate('Statistics')} style={{elevation:5, width:width, height:height, marginTop:17, borderRadius:10, display:'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
+             
+            <ImageBackground
+                style={{width:'100%', height:'100%', position:'absolute', shadowColor:'black'}}
+                imageStyle={{borderRadius:10}}
+                source={require('../../../assets/myImages/BackgroundImages/Statistics_image.jpg')}>
+                    <LinearGradient
+                    start={[0,0]}
+                    colors={['transparent','rgba(0,0,0,1)']}
+                    style={{position: 'absolute', left: 0, top:0, right: 0, bottom:0, height:'100%', borderRadius:10}}
+                />
+            </ImageBackground>
+            <Text style={{fontSize: Fonts.f20px, fontWeight:'bold', color:'white'}}>{text}</Text>
+
+        </Pressable>
+    )
+}
 
 export function ImageButtonOrder({width, height, text, resizeMode, source, navigation}) {
     return(
