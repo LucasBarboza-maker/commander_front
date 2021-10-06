@@ -78,7 +78,7 @@ export default function StatisticsDetails({navigation}) {
                     return card(e,index);
                 })}
             </View>
-            <View style={{width:'90%', height:100, marginTop:25, backgroundColor:Utils.white_color, elevation:5, padding:14, display: 'flex', justifyContent: 'space-between'}}>
+            <Pressable onPress={() => navigation.navigate("StatisticsTables")} style={{width:'90%', height:100, marginTop:25, backgroundColor:Utils.white_color, elevation:5, padding:14, display: 'flex', justifyContent: 'space-between'}}>
                 <View style={{display:'flex', flexDirection:'row', justifyContent: 'space-between'}}>
                     <Text style={{fontSize:Fonts.f18px, color:Utils.black_color}}>Quantidade de Mesas</Text>
                     <Text style={{fontSize:Fonts.f23px, color:Utils.green_opaque, fontWeight:'bold'}}>75</Text>
@@ -87,7 +87,7 @@ export default function StatisticsDetails({navigation}) {
                     <Text style={{fontSize:Fonts.f18px, color:Utils.text_opaque}}>01/10/2021</Text>
                     <Text style={{fontSize:Fonts.f18px, color:Utils.text_opaque}}>Ver Detalhes</Text>
                 </View>
-            </View>    
+            </Pressable>    
         </View> 
       </ScrollView>
 

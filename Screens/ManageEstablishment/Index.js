@@ -7,7 +7,7 @@ import Fonts from '../../assets/Utils/fontSizes.json'
 
 import GlobalStatusBar from '../../components/StatusBar/StatusBar.js';
 import CommanderIconSvg from '../../components/SVGComponents/CommanderIconWhite';
-import { ImageButtonManageStablishment, ImageButtonNotebook, ImageButtonOrder } from '../../components/Inputs/Buttons/ImageButton.js';
+import { EditStablishment, ImageButtonNotebook, ImageButtonOrder, ImageButtonMenuProducts } from '../../components/Inputs/Buttons/ImageButton.js';
 import { BackButtonWhite } from '../../components/Inputs/Buttons/backButton.js';
 import Button from '../../components/Inputs/Buttons/buttons.js'
 
@@ -35,9 +35,9 @@ export default function ManageEstablishment({ navigation, route}) {
       <View style={{ height: '60%', width: '100%', justifyContent: 'flex-start', alignItems: 'center', paddingLeft: 23, paddingRight: 23 }}>
        
         <ImageButtonNotebook width="100%" height="30%" text="Histórico de Vendas" resizeMode='stretch' navigation={navigation} />
-        <ImageButtonManageStablishment width="100%" height="30%" text="Editar Restaurante" resizeMode='stretch'/>
+        <EditStablishment width="100%" height="30%" text="Editar Restaurante" resizeMode='stretch' navigation={navigation}/>
         <ImageButtonOrder width="100%" height="30%" text="Gerencia Funcionários" resizeMode='stretch' />
-        <ImageButtonOrder width="100%" height="30%" text="Alterar Cardápio" resizeMode='stretch' />
+        <ImageButtonMenuProducts width="100%" height="30%" text="Alterar Cardápio" resizeMode='stretch' navigation={navigation} />
       </View>
     </>
   );

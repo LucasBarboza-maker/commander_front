@@ -47,7 +47,7 @@ export default function Comandar({navigation}) {
                 </>
                 :
                 <>
-                    <BasicTextInputPlaceHolderKeep placeHolder="Nome" placeHolderExample="Digite o Nome" keyboardType="numeric" value={neighbourhoodValue} setValue={setNeighbourhoodValue} mask='AAA'/>
+                    <BasicTextInputPlaceHolderKeep placeHolder="Nome" placeHolderExample="Digite o Nome" keyboardType="default" value={neighbourhoodValue} setValue={setNeighbourhoodValue} mask='AAA'/>
                     <MaskedTextInputPlaceHolderKeep placeHolder="Telefone" placeHolderExample="(99)99999-9999" keyboardType="numeric" value={telephoneValue} setValue={setTelephoneValue} mask='(99)99999-9999'/>
                     <BasicTextInputPlaceHolderKeep placeHolder="Estado" placeHolderExample="Digite o Estado" keyboardType="default" value={referenceValue} setValue={setReferenceValue}/>
                     <BasicTextInputPlaceHolderKeep placeHolder="Cidade" placeHolderExample="Digite a Cidade" keyboardType="default" value={cityValue} setValue={setCityValue}/>

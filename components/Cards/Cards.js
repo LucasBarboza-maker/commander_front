@@ -40,6 +40,30 @@ export function TableCard({title, description, employer, delivery, width, height
     )
 }
 
+export function StatisticsTableCard({numero, hora, valor, delivery, width, height, navigation}) {
+
+    const[visible, setVisible] = useState(true);
+    return(
+        <Pressable onPress={() => navigation.navigate("TableDetails", {delivery:delivery})} style={{width: width, height:height, backgroundColor:'white', zIndex:-10, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
+            <View style={{display: 'flex', flexDirection:'row', padding:10}}>
+                <View style={{display: 'flex', justifyContent: 'space-between', width:'50%'}}>
+                    <View style={{display: 'flex', flexDirection:'row', justifyContent: 'space-between'}}>
+                        <Text style={{fontSize:fonts.f18px, color:Colors.text_opaque}}>Mesa: {numero}</Text>
+                        <Text style={{fontSize:fonts.f18px, color:Colors.text_opaque}}>{hora}Hrs</Text>
+                    </View>
+                    <View>
+                        <Text style={{fontSize:fonts.f15px, color:Colors.text_opaque}}>Toque para ver detalhes</Text>
+                    </View>
+                </View>
+                <View style={{display: 'flex', alignItems: 'flex-end', width:'50%', justifyContent: 'center'}}>
+                    <Text style={{fontSize:fonts.f23px, fontWeight: 'bold', color:Colors.green_opaque}}>R$ {valor}</Text>
+                </View>
+            </View>
+        </Pressable>
+   
+    )
+}
+
 export function ProductCard({title, description, employer, delivery, width, height, preco, source, navigation}) {
 
     return(
@@ -56,6 +80,34 @@ export function ProductCard({title, description, employer, delivery, width, heig
                 </View>
             </View>
             <View style={{width:'30%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'flex-end'}}>
+                    <ImageBackground
+                    style={{width:100, height:100, position:'absolute', elevation:5, shadowColor:'black'}}
+                    imageStyle={{borderRadius:5}}
+                    source={source}>
+                    </ImageBackground>
+            </View>
+        </Pressable>
+   
+    )
+}
+
+export function ProductCardMenu({title, description, employer, delivery, width, height, preco, source, navigation}) {
+
+    return(
+        <Pressable onPress={() => navigation.navigate("EditOrCreateProduct",{id:1})} style={{width: width, height:height, backgroundColor:'white', zIndex:-1, borderBottomWidth:1,display: 'flex', flexDirection:'row', padding:10, borderColor:Colors.border_opaque}}>
+            <FontAwesomeIcon onPress={()=> setVisible(false)} icon={ faTimes } size={30} style={{color:Colors.red_opaque, elevation:10, position:'absolute', top:5, right:3, zIndex:10, backgroundColor:Colors.white_color}} />                    
+            <View style={{width:'70%', height:'100%', display: 'flex', justifyContent:'space-between'}}>
+                <View>
+                    <Text style={{fontSize:fonts.f19px}}>{title}</Text>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.text_opaque}}>{description}</Text>
+                </View>
+                <View>
+                    <Text style={{fontSize:fonts.f15px, color:Colors.white_color, borderRadius:2, elevation:5, backgroundColor:Colors.green_dark, width:100, textAlign:'center'}}>
+                        R$:{preco}
+                    </Text>
+                </View>
+            </View>
+            <View style={{width:'30%', height:'100%', display:'flex', flexDirection:'column', justifyContent:'center', alignItems: 'flex-end', zIndex:-1}}>
                     <ImageBackground
                     style={{width:100, height:100, position:'absolute', elevation:5, shadowColor:'black'}}
                     imageStyle={{borderRadius:5}}

@@ -15,6 +15,10 @@ import ProductDetails from './Screens/ProductDetails/Index.js';
 import TableDetails from './Screens/TableDetails/Index.js';
 import Statistics from './Screens/Statistics/Index.js';
 import StatisticsDetails from './Screens/StatisticsDetails/Index.js';
+import StatisticsTables from './Screens/StatisticsTables/Index.js';
+import EditOrCreateEstablishment from './Screens/EditOrCreate/Establishment/Index';
+import MenuProducts from './Screens/MenuProducts/Index.js';
+import EditOrCreateProduct from './Screens/EditOrCreate/Product/Index';
 
 const Stack = createNativeStackNavigator();
 
@@ -114,6 +118,31 @@ const MyStack = () => {
             component={StatisticsDetails}
             options={{ title: 'StatisticsDetails' }}
           />
+
+          <Stack.Screen
+            name="StatisticsTables"
+            component={StatisticsTables}
+            options={{ title: 'StatisticsTables' }}
+          />
+
+          <Stack.Screen
+            name="EditOrCreateEstablishment"
+            component={EditOrCreateEstablishment}
+            options={{ title: 'EditOrCreateEstablishment' }}
+          />
+
+          <Stack.Screen
+            name="MenuProducts"
+            component={MenuProducts}
+            options={{ title: 'MenuProducts' }}
+          />
+                    
+          <Stack.Screen
+            name="EditOrCreateProduct"
+            component={EditOrCreateProduct}
+            options={{ title: 'EditOrCreateProduct' }}
+          />
+          
         </Stack.Navigator>
         
       </NavigationContainer>

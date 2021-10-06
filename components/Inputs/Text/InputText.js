@@ -61,6 +61,26 @@ export function MaskedTextInputPlaceHolderKeep({placeHolder, width, height, icon
     )
 }
 
+export function MaskedCNPJorCPFTextInputPlaceHolderKeep({placeHolder, width, height, icon, placeHolderExample, keyboardType, value, setValue, mask, type}) {
+    return(
+        <View>
+            <TextInputMask multiline 
+                style={{...styles.input, width:width , height:height, textAlign:'right', paddingRight:18}}
+                    type={type}
+                    options={{
+                    mask:mask
+                }}
+                keyboardType={keyboardType}
+                placeholder={placeHolderExample}
+                value={value}
+                onChangeText={text => {
+                    setValue(text);
+                }}
+                />
+            <Text style={{position: 'absolute', bottom:28, left:30, fontSize:fonts.f17px, color:Colors.text_opaque}}>{placeHolder}</Text>
+        </View>
+    )
+}
 
 export function TextAreaInputPlaceHolderKeep({placeHolder, width, height, keyboardType, value, setValue}) {
     return(
