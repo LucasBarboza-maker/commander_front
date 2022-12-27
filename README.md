@@ -19,9 +19,9 @@ O projeto foi feito para utilizar o front end em react-native e entender, mas co
       <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/ManageRestaurant-1.png" /></td>
   </tr>
    <tr>
-      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/ChooseRestaurant-1.png" /></td>
-      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/ChooseRestaurant-1.png" /></td>
-      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/ChooseRestaurant-1.png" /></td>
+      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/OrderInfo.png" /></td>
+      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/ProductsScreen-1.png" /></td>
+      <td><img src="https://github.com/LucasBarboza-maker/commander_front/blob/main/assets/readme_images/TablesScreen.png" /></td>
   </tr>
 </table>
     
